@@ -6,6 +6,7 @@
     color: #fff;
     font-size : 20px
 }
+
 .datatoday {
     margin-left: 30px;
     margin-top: 200px;
@@ -16,15 +17,20 @@
     padding: 30px;
     border-radius: 20px;
 }
+
 .datenow {
     text-align: center;
 }
+
 .datenow, .wind, .pressure {
     padding: 10px;
 }
+
 .pressure {
     text-align: center;
 }
-.datesevenday {
-    
+
+.degrees {
+    font-size: 30px;
+    padding-left: 20px;
 }

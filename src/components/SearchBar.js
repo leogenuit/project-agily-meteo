@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import FontAwesomeIcon from './FontAwesomeIcon';
-
 
 const SearchBar = () => {
     const [data,setData] = useState([])
@@ -24,19 +22,19 @@ const SearchBar = () => {
             let day = dateObj.getUTCDate();
             let year = dateObj.getUTCFullYear();
             
-            let newdate = day + " - " + month + " - " + year;
+            let newdate = day + " - " + month + " - " + year + " ";
     return (
         <div>
-            
             <div className="searchbar">
                 
-                    <input value={city}
-                    onChange={event => setCity(event.target.value)}
-                    onKeyPress={searchCity}
-                    type="text" placeholder="Enter a city..." />
+                <input value={city}
+                onChange={event => setCity(event.target.value)}
+                onKeyPress={searchCity}
+                type="text" placeholder="Enter a city..." />
             </div>
             
         <div className="container flex">
+
             <div className="datatoday">
                 <div className="datenow">{newdate}</div>
                 <div>
@@ -49,11 +47,19 @@ const SearchBar = () => {
                     </div>
                 </div>
             </div>
-            <div className="datasevenday">
+
+            <div className="datafivenextday">
+
                 <div className="dataoneday flex">
-                    <div className="logo">
-                        <FontAwesomeIcon icon="fa-solid fa-droplet-degree" />
+                    <div className="datetime">
+                        {newdate}
                     </div>
+                    <div className="degrees">
+                        {data.main ? <p> {data.main.temp} °F</p> : null }
+                    </div>
+                </div>
+
+                <div className="dataoneday flex">
                     <div className="datetime">
                         {newdate}
                     </div>
@@ -61,10 +67,8 @@ const SearchBar = () => {
                         {data.main ? <p>{data.main.temp} °F</p> : null }
                     </div>
                 </div>
+
                 <div className="dataoneday flex">
-                    <div className="logo">
-                        <FontAwesomeIcon icon="fa-solid fa-droplet-degree" />
-                    </div>
                     <div className="datetime">
                         {newdate}
                     </div>
@@ -72,10 +76,8 @@ const SearchBar = () => {
                         {data.main ? <p>{data.main.temp} °F</p> : null }
                     </div>
                 </div>
+
                 <div className="dataoneday flex">
-                    <div className="logo">
-                        <FontAwesomeIcon icon="fa-solid fa-droplet-degree" />
-                    </div>
                     <div className="datetime">
                         {newdate}
                     </div>
@@ -83,50 +85,15 @@ const SearchBar = () => {
                         {data.main ? <p>{data.main.temp} °F</p> : null }
                     </div>
                 </div>
+
                 <div className="dataoneday flex">
-                    <div className="logo">
-                        <FontAwesomeIcon icon="fa-solid fa-droplet-degree" />
-                    </div>
                     <div className="datetime">
                         {newdate}
                     </div>
                     <div className="degrees">
                         {data.main ? <p>{data.main.temp} °F</p> : null }
                     </div>
-                </div>
-                <div className="dataoneday flex">
-                    <div className="logo">
-                        <FontAwesomeIcon icon="fa-solid fa-droplet-degree" />
-                    </div>
-                    <div className="datetime">
-                        {newdate}
-                    </div>
-                    <div className="degrees">
-                        {data.main ? <p>{data.main.temp} °F</p> : null }
-                    </div>
-                </div>
-                <div className="dataoneday flex">
-                    <div className="logo">
-                        <FontAwesomeIcon icon="fa-solid fa-droplet-degree" />
-                    </div>
-                    <div className="datetime">
-                        {newdate}
-                    </div>
-                    <div className="degrees">
-                        {data.main ? <p>{data.main.temp} °F</p> : null }
-                    </div>
-                </div>
-                <div className="dataoneday flex">
-                    <div className="logo">
-                        <FontAwesomeIcon icon="fa-solid fa-droplet-degree" />
-                    </div>
-                    <div className="datetime">
-                        {newdate}
-                    </div>
-                    <div className="degrees">
-                        {data.main ? <p>{data.main.temp} °F</p> : null }
-                    </div>
-                </div>
+                </div>                
             </div>
         </div>
      </div> 

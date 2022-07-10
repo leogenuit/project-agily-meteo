@@ -10,7 +10,7 @@
       padding: 10px;
 
       li {
-        color: $color-1;
+        color: #fff;
         transition: 0.2s;
         cursor: pointer;
       }
@@ -23,7 +23,7 @@
         content: "";
         height: 4px;
         width: 0;
-        background: $color-1;
+        background: #fff;
         position: absolute;
         border-radius: 10px;
         bottom: 0px;

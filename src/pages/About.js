@@ -7,8 +7,6 @@ const About = () => {
     return (
         <div className="about">
             <Navigation />
-            <Card />
-           
         </div>
     );
 };
